@@ -24,10 +24,10 @@ def move_files(input_csv: Path, path_col: str, cluster_col: str, output_dir: Pat
 # Defining a command for the app that takes the arguments from the user
 @app.command()
 def run(
-    input_csv: Path = typer.Argument(..., help="The input csv file"),
-    path_col: str = typer.Option("path", help="The name of the path column"),
-    cluster_col: str = typer.Option("cluster", help="The name of the cluster column"),
-    output_dir: Path = typer.Option(Path.cwd(), help="The output directory")
+    input_file: Path = typer.Argument(..., help="The input csv file"),
+    path: str = typer.Option("path", help="The name of the path column"),
+    cluster: str = typer.Option("cluster", help="The name of the cluster column"),
+    output: Path = typer.Option('.', help="The output directory")
 ):
     # Calling the move_files function with the arguments
-    move_files(input_csv, path_col, cluster_col, output_dir)
+    move_files(input_file, path, cluster, output)
