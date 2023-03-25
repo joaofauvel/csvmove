@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "csvmove"
-version = "0.2.0"
+version = "0.2.1"
 description = "CLI utility that moves files based on columns in a csv"
 authors = ["João Fauvel <jmmfauvel@gmail.com>"]
 readme = "README.md"

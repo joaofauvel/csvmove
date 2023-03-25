@@ -32,7 +32,7 @@ def run(
     input_file: Path = typer.Argument(..., help="The input csv file"),
     path: str = typer.Option("path", help="The name of the path column"),
     cluster: str = typer.Option("cluster", help="The name of the cluster column"),
-    copy: bool = typer.Option(False, help="Whether or not to copy instead of move"),
+    copy: bool = typer.Option(False, "--copy/--move", help="Whether or not to copy instead of move"),
     output: Path = typer.Option('.', help="The output directory")
 ):
     # Calling the move_files function with the arguments
